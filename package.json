@@ -1,11 +1,14 @@
 {
   "name": "utils-node",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Node.js utility functions.",
   "main": "index.js",
   "module": "main.js",
   "dependencies": {
-    "esm": "^3.2.25"
+    "abort-controller": "^3.0.0",
+    "esm": "^3.2.25",
+    "iconv-lite": "^0.6.2",
+    "node-fetch": "^2.6.0"
   },
   "devDependencies": {},
   "scripts": {
