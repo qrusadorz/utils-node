@@ -1,0 +1,25 @@
+{
+  "name": "utils-node",
+  "version": "0.1.0",
+  "description": "Node.js utility functions.",
+  "main": "index.js",
+  "module": "main.js",
+  "dependencies": {
+    "esm": "^3.2.25"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/qrusadorz/utils-node.git"
+  },
+  "author": "qrusadorz",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/qrusadorz/utils-node/issues"
+  },
+  "homepage": "https://github.com/qrusadorz/utils-node#readme",
+  "private": true
+}
