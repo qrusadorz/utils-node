@@ -55,15 +55,6 @@ const writeFile = async (filename, json, option = {}) => {
 
 const deleteFile = async (filename) => {
     try {
-        // Check if the file exists in the current directory.
-        // const ret = await fs.access('C:\\Users\\z\\src\\puppeteer-10bye\\latestDev.json', fs.constants.F_OK, (err) => {
-        //     console.log(`${filename} ${err ? 'does not exist' : 'exists'}`);
-        // });
-        // const ret = await fs.access('C:\\Users\\z\\src\\puppeteer-10bye\\latestDev.json', fs.constants.F_OK);
-        // const ret = await fs.access(filename, fs.constants.F_OK);
-        // console.log('ret:', ret);
-        // const acces = await fsPromises.access("itemsSalesPrice.jsonxxx", fs.constants.R_OK);
-
         await fsPromises.unlink(filename, callback);
     } catch (e) {
         console.error('deleteFile:', e);
@@ -85,8 +76,6 @@ const mkdir = async (path) => {
             // console.log("mkdir:", folderPath);
             await fsPromises.mkdir(folderPath);
         }
-        // console.log('ret:', ret);
-        // const acces = await fsPromises.access("itemsSalesPrice.jsonxxx", fs.constants.R_OK);
     }
 }
 
