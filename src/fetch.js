@@ -45,7 +45,7 @@ const fetchJson = async (url, option) => {
 const fetchText = async (url, option) => {
     const response = await fetchCore(url, option);
 
-    if (option.sjis) {
+    if (option && option.sjis) {
         return iconv.decode(Buffer.from(await response.arrayBuffer()), "shift_jis")
     }
 
