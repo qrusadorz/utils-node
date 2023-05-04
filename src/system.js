@@ -1,11 +1,18 @@
+/**
+ * 
+ * @returns {string}
+ */
 const getRootpath = () => {
-    // TODO __dirnameを利用するからガード不要かも？
-    // do not have process.mainModule, when npm test
-    if (!process.mainModule) return;
+    // 現在実行中のファイルのURLを取得
+    const currentFileUrl = import.meta.url;
 
-    // const rootpaths = process.mainModule.filename.replace(/\\/g, '/').split('/');    // 実行コマンドのパスになるためNG
-    // rootpaths.pop();	// remove file name
-    const rootpaths = __dirname.replace(/\\/g, '/').split('/');
+    // URL をファイルパスに変換
+    const currentFilePath = fileURLToPath(currentFileUrl);
+
+    // ルートディレクトリのパスを取得
+    const currentDir = path.dirname(currentFilePath);
+
+    const rootpaths = currentDir.replace(/\\/g, '/').split('/');
     rootpaths.pop();	// remove utils folder
     const rootpath = rootpaths.join('/');
     // console.log('rootpath:', rootpath);

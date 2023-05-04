@@ -1,5 +1,5 @@
 import fs from "fs";
-import { getRootpath } from './system';
+import { getRootpath } from './system.js';
 const fsPromises = fs.promises;
 
 const callback = err => { if (err) console.error(err); };

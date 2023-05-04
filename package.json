@@ -1,9 +1,9 @@
 {
   "name": "utils-node",
-  "version": "0.2.7",
+  "version": "0.3.0",
   "description": "Node.js utility functions.",
   "main": "index.js",
-  "module": "main.js",
+  "type": "module",
   "dependencies": {
     "abort-controller": "^3.0.0",
     "esm": "^3.2.25",

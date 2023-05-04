@@ -2,7 +2,12 @@ import { setTimeout } from 'timers/promises'
 
 const sleep = async ms => await setTimeout(ms);
 
-// 規定時間未満の連続アクセス防止
+/**
+ * 規定時間未満の連続アクセス防止
+ * @param {number} duration 
+ * @param {number} start 
+ * @returns 
+ */
 const sleepForProtection = async (duration, start) => {
     const sleepTime = start + duration - Date.now();
     if (sleepTime > 0) {
